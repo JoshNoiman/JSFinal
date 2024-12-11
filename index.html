@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catch the Boars</title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #gameCanvas {
+            border: 1px solid black;
+        }
+        #usernameForm {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        #usernameForm input {
+            font-size: 20px;
+            padding: 10px;
+            margin-right: 10px;
+        }
+        #usernameForm button {
+            font-size: 20px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Catch the Boars!</h1>
+    <div id="usernameForm">
+        <input type="text" id="usernameInput" placeholder="Enter your username"/>
+        <button onclick="startGame()">Start Game</button>
+    </div>
+    <canvas id="gameCanvas" width="800" height="800"></canvas>
+    <script src="final.js"></script>
+</body>
+</html>
