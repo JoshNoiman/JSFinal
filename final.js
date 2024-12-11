@@ -14,16 +14,16 @@ async function getWeather()
         const response = await fetch(weatherApiUrl);
         const data = await response.json();
 
-        // Check if the response is valid and contains the expected properties
+        //check if the response is valid and contains the expected properties
         if (data && data.weather && data.weather[0] && data.main) {
-            return data;  // Return valid weather data
+            return data;  //return valid weather data
         } else {
             console.error('Invalid weather data received:', data);
-            return null;  // Return null if data is missing or invalid
+            return null;  //return null if data is missing or invalid
         }
     } catch (error) {
         console.error('Error fetching weather data:', error);
-        return null;  // Return null on error
+        return null;  //return null on error
     }
 }
 
@@ -31,7 +31,7 @@ async function getWeather()
 async function updateWeather() {
     const weatherData = await getWeather();
 
-    // Check if we have valid weather data
+    //check if we have valid weather data
     if (!weatherData) {
         console.error('Weather data is not available.');
         return;  // Exit the function if weather data is invalid
